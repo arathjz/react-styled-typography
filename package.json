@@ -1,6 +1,6 @@
 {
   "name": "react-styled-typography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A styled-component that returns the tag you need with super powers",
   "main": "index.js",
   "scripts": {
