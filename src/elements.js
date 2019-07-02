@@ -55,11 +55,47 @@ const H1 = styled.h1`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+	${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 
 `;
@@ -117,11 +153,47 @@ const H2 = styled.h2`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+		${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
@@ -178,11 +250,47 @@ const H3 = styled.h3`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+		${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
@@ -239,11 +347,47 @@ const H4 = styled.h4`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+		${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
@@ -294,11 +438,47 @@ const H5 = styled.h5`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+		${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
@@ -355,11 +535,47 @@ const H6 = styled.h6`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+		${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
@@ -415,11 +631,47 @@ const P = styled.p`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+		${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+		${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
@@ -475,12 +727,49 @@ const PRE = styled.pre`
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
 
-		${props => props.CSS && `${props.CSS}`}
+	${props => props.css && `${props.css}`}
 	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
 	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
 	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
 	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+	${props => props.clampin &&` 
+		position: relative;
+		${props.clampin.height &&`height:${props.clampin.height};
+		`}
+		overflow: hidden;
+		&:after {
+		  text-align: right;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  width: 70%;
+		${props.clampin.type === "fade" ?`
+			content: "";
+			height:${props.clampin.lineSize}; 
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			`:
+			 props.clampin.type === "dots"?`
+		 	content: "...";`:`content: "${props.clampin.type}";`
+		}
+		}`
+	}
+
+	${props => props.lineClamp && `
+				display: -webkit-box;
+				-webkit-line-clamp: ${props.lineClamp.size};
+				-webkit-box-orient: vertical;
+				${props.lineClamp.height &&`height:${props.lineClamp.height};`}
+				overflow: hidden;
+	   		`}
+
+	${props => props.truncate && `   
+		white-space: nowrap; 
+		width: ${props.truncate}; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	`}
 
 `;
 
 export { H1, H2, H3, H4, H5, H6, P, PRE };
+
