@@ -20,6 +20,10 @@
     "Arath Jimenez <@arathjz> (https://twitter.com/@arathjz)",
     "Jensen Baronville <@baronjensen> (https://twitter.com/@baronjens)"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arathjz/react-styled-typography.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -30,7 +34,7 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
-    "webpack-cli": "^3.3.4"
+    "webpack-cli": "^3.3.5"
   },
   "dependencies": {
     "react": "^16.8.6",
