@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from './media';
 
 const H1 = styled.h1`
 	font-size: ${props => props.fontSize};
@@ -53,6 +54,14 @@ const H1 = styled.h1`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
+
 `;
 
 const H2 = styled.h2`
@@ -107,6 +116,13 @@ const H2 = styled.h2`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 const H3 = styled.h3`
@@ -161,6 +177,13 @@ const H3 = styled.h3`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 const H4 = styled.h4`
@@ -215,6 +238,13 @@ const H4 = styled.h4`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 const H5 = styled.h5`
@@ -263,6 +293,13 @@ const H5 = styled.h5`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 const H6 = styled.h6`
@@ -317,6 +354,13 @@ const H6 = styled.h6`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 const P = styled.p`
@@ -370,6 +414,13 @@ const P = styled.p`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 const PRE = styled.pre`
@@ -423,6 +474,13 @@ const PRE = styled.pre`
 	${props => props.underline && `text-decoration: underline`};
 	${props => props.weight && `font-weight: ${props.weight}`};
 	${props => props.fontStyle && `font-style: ${props.fontStyle}`};
+
+		${props => props.CSS && `${props.CSS}`}
+	${props => props.desktopCSS && media().desktop`${props.desktopCSS}`}
+	${props => props.tabletCSS && media().tablet`${props.tabletCSS}`}
+	${props => props.phoneCSS && media().phone`${props.phoneCSS}`}
+	${props => props.mediaCSS && media(props.mediaCSS[0]).desktop`${props.mediaCSS[1]}`}
+
 `;
 
 export { H1, H2, H3, H4, H5, H6, P, PRE };

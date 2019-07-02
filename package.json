@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production"
-  },
+  }, 
   "keywords": [
     "styled-components",
     "react",
@@ -16,6 +16,10 @@
     "name": "arathjz",
     "email": "arath.jimenez.mx@gmail.com"
   },
+  "contributors": [
+    "Arath Jimenez <@arathjz> (https://twitter.com/@arathjz)",
+    "Jensen Baronville <@baronjensen> (https://twitter.com/@baronjens)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",

@@ -13,7 +13,12 @@ const Typography = ({
 	className,
 	underline,
 	weight,
-	fontStyle
+	fontStyle,
+	CSS,
+	desktopCSS,
+	tabletCSS,
+	phoneCSS,
+	mediaCSS
 }) => {
 	return setTag(
 		color,
@@ -28,7 +33,12 @@ const Typography = ({
 		className,
 		underline,
 		weight,
-		fontStyle
+		fontStyle,
+		CSS,
+		desktopCSS,
+		tabletCSS,
+		phoneCSS,
+		mediaCSS
 	);
 };
 

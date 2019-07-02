@@ -15,177 +15,95 @@ const setTag = (
 	className,
 	underline,
 	weight,
-	fontStyle
+	fontStyle,
+	CSS,
+	desktopCSS,
+	tabletCSS,
+	phoneCSS,
+	mediaCSS
 ) => {
 	let tag = undefined;
+
+	const config = {
+		color,
+		variant,
+		marginT,
+		marginB,
+		marginL,
+		marginR,
+		align,
+		fontSize,
+		className,
+		underline,
+		weight,
+		fontStyle,
+		CSS,
+		desktopCSS,
+		tabletCSS,
+		phoneCSS,
+		mediaCSS
+	}
+
 	switch (variant) {
 		case types.HEADING1:
 			tag = (
-				<H1
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<H1 {...config}>
 					{children}
 				</H1>
 			);
 			break;
 		case types.HEADING2:
 			tag = (
-				<H2
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<H2 {...config}>
 					{children}
 				</H2>
 			);
 			break;
 		case types.HEADING3:
 			tag = (
-				<H3
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<H3 {...config}>
 					{children}
 				</H3>
 			);
 			break;
 		case types.HEADING4:
 			tag = (
-				<H4
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<H4 {...config}>
 					{children}
 				</H4>
 			);
 			break;
 		case types.HEADING5:
 			tag = (
-				<H5
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<H5 {...config}>
 					{children}
 				</H5>
 			);
 			break;
 		case types.HEADING6:
 			tag = (
-				<H6
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<H6 {...config}>
 					{children}
 				</H6>
 			);
 			break;
 		case types.P:
 			tag = (
-				<P
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<P {...config}>
 					{children}
 				</P>
 			);
 			break;
 		case types.PRE:
 			tag = (
-				<PRE
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<PRE {...config}>
 					{children}
 				</PRE>
 			);
 			break;
 		default:
 			tag = (
-				<P
-					className={className}
-					underline={underline}
-					color={color}
-					fontSize={fontSize}
-					align={align}
-					marginT={marginT}
-					marginB={marginB}
-					marginL={marginL}
-					marginR={marginR}
-					weight={weight}
-					fontStyle={fontStyle}
-				>
+				<P {...config}>
 					{children}
 				</P>
 			);
