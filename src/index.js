@@ -1,6 +1,7 @@
 import { setTag } from './functions';
 
 const Typography = ({
+	//Basic typography
 	color,
 	variant,
 	children,
@@ -14,13 +15,20 @@ const Typography = ({
 	underline,
 	weight,
 	fontStyle,
+	//Advanced props
 	clampin,
 	truncate,
 	css,
 	desktopCSS,
 	tabletCSS,
 	phoneCSS,
-	mediaCSS
+	mediaCSS,
+	//Events:
+	onClick,
+	onCopy,
+	onCut,
+	onContextMenu,
+	onDoubleClick
 }) => {
 	return setTag(
 		color,
@@ -42,7 +50,13 @@ const Typography = ({
 		desktopCSS,
 		tabletCSS,
 		phoneCSS,
-		mediaCSS
+		mediaCSS,
+		onClick,
+		onCopy,
+		onCut,
+		onContextMenu,
+		onDoubleClick
+
 	);
 };
 

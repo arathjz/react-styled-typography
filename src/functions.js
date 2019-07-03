@@ -16,13 +16,20 @@ const setTag = (
 	underline,
 	weight,
 	fontStyle,
+	//====
 	clampin,
 	truncate,
 	css,
 	desktopCSS,
 	tabletCSS,
 	phoneCSS,
-	mediaCSS
+	mediaCSS,
+	//====
+	onClick,
+	onCopy,
+	onCut,
+	onContextMenu,
+	onDoubleClick
 ) => {
 	let tag = undefined;
 
@@ -39,13 +46,20 @@ const setTag = (
 		underline,
 		weight,
 		fontStyle,
+		//====
 		clampin,
 		truncate,
 		css,
 		desktopCSS,
 		tabletCSS,
 		phoneCSS,
-		mediaCSS
+		mediaCSS,
+		//====
+		onClick,
+		onCopy,
+		onCut,
+		onContextMenu,
+		onDoubleClick
 	}
 
 	switch (variant) {

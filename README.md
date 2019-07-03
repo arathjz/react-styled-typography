@@ -125,6 +125,8 @@ Class App extends Component {
 ```
 
 
+
+
 ### API
  | Props        | Type           | Description  | Example |
 | :-------------: |:-------------:| :-------------:| :-------------:|
@@ -148,6 +150,15 @@ Class App extends Component {
 | tabletCSS  | String |CSS style media size 700px screens |`/*css string*/` applies the styles of the string |
 | phoneCSS   | String |CSS style media size 500px screens |`/*css string*/` applies the styles of the string|
 
+
+
+### Events
+
+    - onClick
+    - onCopy
+    - onCut
+    - onContextMenu
+    - onDoubleClick
 
 ### Contribute
 Show your heart and support by giving a ⭐. Any suggestions are welcome ! 
